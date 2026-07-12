@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Login - Stock Simulator</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #030b14, #081b33);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 50px 45px;
+    width: 420px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+.icon { font-size: 52px; margin-bottom: 10px; }
+h2 { color: #e63946; font-size: 26px; margin-bottom: 6px; }
+.subtitle { color: rgba(255,255,255,0.45); font-size: 14px; margin-bottom: 32px; }
+label { display: block; text-align: left; color: rgba(255,255,255,0.65); font-size: 13px; margin-bottom: 6px; margin-top: 18px; }
+input {
+    width: 100%;
+    padding: 13px 16px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s;
+}
+input:focus { border-color: #e63946; }
+button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover { background: #c0303c; }
+.back { display: block; margin-top: 18px; color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; }
+.back:hover { color: white; }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="icon">🔐</div>
+    <h2>Admin Portal</h2>
+    <p class="subtitle">Restricted Access — Admins Only</p>
+    <form action="adminLogin" method="post">
+        <label>Admin Username</label>
+        <input type="text" name="username" placeholder="Enter admin username" required />
+        <label>Admin Password</label>
+        <input type="password" name="password" placeholder="Enter admin password" required />
+        <button type="submit">🔓 Login as Admin</button>
+    </form>
+    <a class="back" href="login.html">← Back to User Login</a>
+</div>
+</body>
+</html>
